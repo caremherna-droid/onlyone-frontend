@@ -8,7 +8,7 @@ function getApiUrl() {
     return process.env.NEXT_PUBLIC_API_URL;
   }
   // Use production backend URL
-  return "http://54.83.74.33:4000";
+  return "https://8c9806fb10e6.ngrok-free.app";
 }
 
 export function getSocket() {
@@ -66,3 +66,4 @@ export function disconnectSocket() {
     socket = null;
   }
 }
+
