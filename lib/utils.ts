@@ -8,11 +8,21 @@ export function cn(...inputs: ClassValue[]) {
 
 // Utility function to get API base URL for constructing image URLs
 export function getApiBaseUrl(): string {
-  // Use environment variable if set, otherwise use production backend
+  // Use environment variable if set
   if (process.env.NEXT_PUBLIC_API_URL) {
     return process.env.NEXT_PUBLIC_API_URL;
   }
-  // Use production backend URL
+  
+  // In browser, check if we're on HTTPS and use HTTPS for backend
+  if (typeof window !== "undefined") {
+    const isHttps = window.location.protocol === "https:";
+    if (isHttps) {
+      // Use HTTPS for production backend when frontend is on HTTPS
+      return "https://54.83.74.33:4000";
+    }
+  }
+  
+  // Default to HTTP for local development
   return "http://54.83.74.33:4000";
 }
 
