@@ -12,12 +12,12 @@ function getApiUrl(): string {
     const isHttps = window.location.protocol === "https:";
     if (isHttps) {
       // Use HTTPS for production backend when frontend is on HTTPS
-      return "https://54.83.74.33:4000";
+      return "https://8c9806fb10e6.ngrok-free.app";
     }
   }
   
   // Default to HTTP for local development
-  return "http://54.83.74.33:4000";
+  return "https://8c9806fb10e6.ngrok-free.app";
 }
 
 const api = axios.create({
@@ -37,3 +37,4 @@ api.interceptors.request.use((config) => {
 });
 
 export default api;
+
