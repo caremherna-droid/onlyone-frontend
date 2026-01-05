@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next { height: 100%; }
+
+/* Fancy logo font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;600;700&display=swap');
+
+.logo-font { font-family: 'Pacifico', cursive; }
+
+/* Girly theme colors */
+:root {
+  --pink-50: #fdf2f8;
+  --pink-100: #fce7f3;
+  --pink-200: #fbcfe8;
+  --pink-300: #f9a8d4;
+  --pink-400: #f472b6;
+  --pink-500: #ec4899;
+  --pink-600: #db2777;
+  --purple-50: #faf5ff;
+  --purple-100: #f3e8ff;
+  --purple-200: #e9d5ff;
+  --purple-300: #d8b4fe;
+  --purple-400: #c084fc;
+  --purple-500: #a855f7;
+  --purple-600: #9333ea;
+}
+
+body {
+  background: #fdf2f8;
+}
+
+/* Remove all gradients - use solid colors only */
+
+/* Simple fade/slide animations */
+.fade-in { animation: fadeIn 300ms ease-out both; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Girly card styling */
+.girly-card {
+  background: white;
+  border: 2px solid #fce7f3;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgba(236, 72, 153, 0.1), 0 2px 4px -1px rgba(236, 72, 153, 0.06);
+}
+
+.girly-input {
+  border: 2px solid #fce7f3;
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.girly-input:focus {
+  border-color: #f472b6;
+  ring: 2px;
+  ring-color: #fce7f3;
+  outline: none;
+}
+
+/* Enhanced girly theme buttons */
+.girly-button {
+  background: #ec4899;
+  border: 2px solid #f472b6;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(236, 72, 153, 0.2);
+}
+
+.girly-button:hover {
+  background: #db2777;
+  border-color: #ec4899;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px -1px rgba(236, 72, 153, 0.3);
+}
+
+.girly-button:active {
+  transform: translateY(0);
+}
+
+/* Enhanced card hover effects */
+.girly-card:hover {
+  box-shadow: 0 8px 16px -4px rgba(236, 72, 153, 0.2), 0 4px 8px -2px rgba(236, 72, 153, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Solid color backgrounds */
+.girly-bg {
+  background: #fdf2f8;
+}
+
+.girly-bg-alt {
+  background: #faf5ff;
+}
+
+/* Error colors */
+.error-bg {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.error-border {
+  border-color: #ef4444;
+}
+
+.error-text {
+  color: #dc2626;
+}
+
+/* Success colors */
+.success-bg {
+  background: #d1fae5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.success-border {
+  border-color: #10b981;
+}
+
+.success-text {
+  color: #059669;
+}
+
+/* Info colors */
+.info-bg {
+  background: #dbeafe;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+.info-border {
+  border-color: #3b82f6;
+}
+
+.info-text {
+  color: #2563eb;
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
